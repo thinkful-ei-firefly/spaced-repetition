@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function Word(props) {
-  console.log(props);
-  return <li key={props.word.id}>{props.word.original}</li>;
+  return (
+    <li>
+      {props.word.original} ({props.word.correct_count}/
+      {props.word.incorrect_count})
+    </li>
+  );
 }

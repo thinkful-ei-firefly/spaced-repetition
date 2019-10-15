@@ -25,8 +25,8 @@ class DashboardRoute extends Component {
 
     const language = data.language.name;
     const words = data.words;
-    const score = data.score;
-    console.log({ language, words, score });
+    const score = data.total_score;
+
     this.setState({ language, words, score });
   };
 
@@ -35,7 +35,7 @@ class DashboardRoute extends Component {
   }
 
   renderWords() {
-    return this.state.words.map(word => <Word word={word} />);
+    return this.state.words.map(word => <Word key={word.id} word={word} />);
   }
 
   render() {
