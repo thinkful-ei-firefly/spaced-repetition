@@ -9,9 +9,9 @@ section {
   padding-left: 2vw;
   font-family: 'Cuprum', sans-serif;
   font-size: 30px;
-  margin: 10px;
   max-width: 550px;
 }
+
 header {
   color: #3c3c3c;
   padding: 15px;
@@ -33,6 +33,7 @@ a:hover {
   background-color: rgba(256, 256, 256, 0.6);
   height: 100vh;
   position: absolute;
+  width: 100%;
 }
 
 input {
@@ -64,34 +65,34 @@ font-family: 'Pathway Gothic One', sans-serif;
 
 */
 
-@media only screen and (max-width: 1025px){
-  body{
+@media only screen and (max-width: 1025px) {
+  body {
     background-size: auto 100vh;
     background-position-x: -400px;
   }
 }
 
-@media only screen and (max-width: 600px){
-  h1{
+@media only screen and (max-width: 600px) {
+  h1 {
     font-size: 35px;
   }
-  header{
+  header {
     font-size: 30px;
     margin: 5px;
     padding: 5px;
     text-align: center;
   }
-  section{
+  section {
     font-size: 35px;
     padding: 2px;
     margin: 2px;
     text-align: center;
   }
-  p{
+  p {
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  h2{
+  h2 {
     font-size: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
