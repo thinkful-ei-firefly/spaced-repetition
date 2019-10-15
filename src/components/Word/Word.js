@@ -3,8 +3,10 @@ import React from 'react';
 export default function Word(props) {
   return (
     <li>
-      {props.word.original} ({props.word.correct_count}/
-      {props.word.incorrect_count})
+      <h4>{props.word.original}</h4>
+      correct answer count: {props.word.correct_count}
+      <br />
+      incorrect answer count: {props.word.incorrect_count}
     </li>
   );
 }

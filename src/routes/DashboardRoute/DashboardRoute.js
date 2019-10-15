@@ -24,8 +24,7 @@ class DashboardRoute extends Component {
 
     const language = data.language.name;
     const words = data.words;
-    const score = data.total_score;
-    console.log(score);
+    const score = data.language.total_score;
     this.setState({ language, words, score });
   };
 
@@ -41,11 +40,12 @@ class DashboardRoute extends Component {
     return (
       <section>
         <h2>{this.state.language}</h2>
+        <h3>Words to practice</h3>
         <ul>{this.renderWords()}</ul>
-        <p>Total Correct: {this.state.score}</p>
-        <Link to="/learn">
-          <button>Start Learning!</button>
-        </Link>
+        <p>Total correct answers: {this.state.score}</p>
+        <a href="/learn">
+          <button>Start practicing</button>
+        </a>
       </section>
     );
   }
