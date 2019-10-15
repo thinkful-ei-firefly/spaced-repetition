@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 // import LanguageContext from './context/LanguageContext';
 import TokenService from '../../services/token-service';
-import WordList from '../../components/WordList/WordList';
+
 import { Link } from 'react-router-dom';
 import config from '../../config';
+import Word from '../../components/Word/Word';
 
 class DashboardRoute extends Component {
   // static contextType = LanguageContext;
@@ -33,17 +34,16 @@ class DashboardRoute extends Component {
     this.getLanguageInfo();
   }
 
+  renderWords() {
+    return this.state.words.map(word => <Word word={word} />);
+  }
+
   render() {
     return (
       <section>
-        <p>Language: {this.context.language}</p>
-        {/* component for word list */}
-        <ul>
-          <li>Word 1: 0/5</li>
-          <li>Word 2</li>
-          <li>Word 3</li>
-        </ul>
-        <p>Total Correct: 10</p>
+        <p>Language: {this.state.language}</p>
+        <ul>{this.renderWords()}</ul>
+        <p>Total Correct: {this.state.score}</p>
         <Link to="/learn">
           <button>Start Learning!</button>
         </Link>
