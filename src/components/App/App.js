@@ -22,6 +22,9 @@ export default class App extends Component {
     const { hasError } = this.state
     return (
       <div className='App'>
+        <style>
+@import url('https://fonts.googleapis.com/css?family=Acme|Cuprum|Pathway+Gothic+One&display=swap');
+</style>
         <Header />
         <main>
           {hasError && (

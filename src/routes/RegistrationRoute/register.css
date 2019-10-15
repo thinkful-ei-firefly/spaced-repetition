@@ -1,0 +1,65 @@
+body{
+  background: url("https://upload.wikimedia.org/wikipedia/commons/0/0e/Itsukushima_Gate.jpg");
+  background-size: 100vw;
+}
+
+section{
+  color: #3C3C3C;
+  padding: 15px;
+  padding-left: 2vw;
+  font-family: 'Cuprum', sans-serif;
+  font-size:  30px;
+  margin: 10px;
+  max-width: 550px;
+}
+header{
+  color: #3C3C3C;
+  padding: 15px;
+  padding-left: 2vw;
+  font-family: 'Acme', sans-serif;
+  font-size: 30px;
+  margin: 10px;
+}
+
+a:visited{
+  color: #3C3C3C;
+}
+a:hover{
+  color: rgb(175, 175, 175);
+  text-shadow: #3C3C3C 2px 2px;
+}
+
+.App{
+  background-color: rgba(256,256,256, 0.6);
+  height: 100vh;
+  position: absolute;
+}
+
+Input{
+  background-color: rgba(256,256,256, 0.6);
+  font-size: 20px;
+  font-family: 'Cuprum', sans-serif;
+  color: #3C3C3C;
+}
+
+Button{
+  border-radius: 5px;
+  background-color: rgba(256,256,256, 0.5);
+  font-size: 25px;
+  padding: 5px;
+  font-family: 'Cuprum', sans-serif;
+  color: #3C3C3C;
+  box-shadow: #3C3C3C 1px 1px;
+}
+Button:hover{
+  background-color: rgba(256,256,256, 1);
+  box-shadow: #3C3C3C 3px 3px;
+}
+
+/*
+font-family: 'Acme', sans-serif;
+font-family: 'Cuprum', sans-serif;
+font-family: 'Pathway Gothic One', sans-serif;
+<link href="https://fonts.googleapis.com/css?family=Acme|Cuprum|Pathway+Gothic+One&display=swap" rel="stylesheet">
+
+*/
