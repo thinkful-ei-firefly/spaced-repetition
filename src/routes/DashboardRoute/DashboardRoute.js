@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
-import { Link } from 'react-router-dom';
 import config from '../../config';
 import Word from '../../components/Word/Word';
 
