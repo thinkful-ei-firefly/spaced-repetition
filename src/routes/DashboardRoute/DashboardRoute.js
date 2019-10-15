@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import LanguageContext from './context/LanguageContext';
+import UserContext from '../../contexts/UserContext';
 import TokenService from '../../services/token-service';
 
 import { Link } from 'react-router-dom';
@@ -8,6 +8,7 @@ import Word from '../../components/Word/Word';
 
 class DashboardRoute extends Component {
   // static contextType = LanguageContext;
+  static contextType = UserContext;
   state = {
     language: '',
     words: [],
@@ -41,6 +42,7 @@ class DashboardRoute extends Component {
   render() {
     return (
       <section>
+        <h2>{this.context.user.name}'s Words</h2>
         <p>Language: {this.state.language}</p>
         <ul>{this.renderWords()}</ul>
         <p>Total Correct: {this.state.score}</p>
