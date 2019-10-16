@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LoginForm from '../../components/LoginForm/LoginForm'
-//import "./login.css";
+import "../register.css";
 
 class LoginRoute extends Component {
   static defaultProps = {
