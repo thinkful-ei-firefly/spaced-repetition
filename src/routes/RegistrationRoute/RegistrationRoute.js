@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { Component } from "react";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import "../register.css";
-=======
-import React, { Component } from 'react';
-import RegistrationForm from '../../components/RegistrationForm/RegistrationForm';
-import './register.css';
->>>>>>> f453f11119c16627ff507661a97afe228fd86a88
 
 class RegistrationRoute extends Component {
   static defaultProps = {
