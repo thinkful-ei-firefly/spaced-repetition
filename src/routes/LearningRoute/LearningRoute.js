@@ -10,15 +10,15 @@ class LearningRoute extends Component {
     currentWord: 0
   };
 
-  getLanguageInfo = async () => {
-    const data = await fetch(`${config.API_ENDPOINT}/language`, {
+  getLanguageHead = async () => {
+    const data = await fetch(`${config.API_ENDPOINT}/language/head`, {
       headers: {
         authorization: `Bearer ${TokenService.getAuthToken()}`
       }
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
-    console.log(data);
+
     const language = data.language.name;
     const words = data.words;
     const score = data.language.total_score;
