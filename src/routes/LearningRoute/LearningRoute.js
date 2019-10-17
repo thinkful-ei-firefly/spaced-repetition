@@ -29,6 +29,7 @@ class LearningRoute extends Component {
   }
   
   handleButtonClick = event => {
+    console.log(this.state);
     this.getNextWord();
   }
   
@@ -96,6 +97,7 @@ class LearningRoute extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <section>
         {this.state.isCorrect === null ? <h2>Translate the word:</h2> : ''}
