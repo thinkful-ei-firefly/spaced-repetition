@@ -15,18 +15,24 @@ class LearningRoute extends Component {
     isCorrect: null
   };
 
-  componentDidMount() {
+
+  getNextWord = () => {
     GuessService.getLanguageHead().then(res =>
       this.setState({
         currentWord: res.nextWord,
         correct: res.wordCorrectCount,
         incorrect: res.wordIncorrectCount,
-        totalScore: res.totalScore
+        totalScore: res.totalScore,
+        isCorrect: null
       })
     );
   }
-
-  onSubmit = event => {
+  
+  handleButtonClick = event => {
+    this.getNextWord();
+  }
+  
+  handleFormSubmit = event => {
     event.preventDefault();
     let { guess } = event.target;
     guess = guess.value;
@@ -59,7 +65,7 @@ class LearningRoute extends Component {
 
   renderForm = () => {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={this.handleFormSubmit}>
         <label htmlFor="learn-guess-input">
           What's the translation for this word?
         </label>
@@ -78,13 +84,16 @@ class LearningRoute extends Component {
             : 'Good try, but not quite right :('}
         </h2>
         <p className="DisplayFeedback">
-          The correct translation for {this.state.currentWord} was
-          {this.state.answer} and you chose {this.state.guess}!
+          The correct translation for {this.state.currentWord} was {this.state.answer} and you chose {this.state.guess}!
         </p>
-        <button>Try another word!</button>
+        <button onClick={this.handleButtonClick}>Try another word!</button>
       </>
     );
   };
+
+  componentDidMount() {
+    this.getNextWord();
+  }
 
   render() {
     return (
