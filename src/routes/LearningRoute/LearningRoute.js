@@ -30,7 +30,7 @@ class LearningRoute extends Component {
   
   handleButtonClick = event => {
     console.log(this.state);
-    this.getNextWord();
+    this.setState({ currentWord: this.state.nextWord, isCorrect: null })
   }
   
   handleFormSubmit = event => {
