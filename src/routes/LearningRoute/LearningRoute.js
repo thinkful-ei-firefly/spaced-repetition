@@ -4,10 +4,9 @@ import config from "../../config";
 
 class LearningRoute extends Component {
   state = {
-    language: "",
-    words: [],
-    score: 0,
-    currentWord: 0
+    correct: 0,
+    incorrect: 0,
+    currentWord: ''
   };
 
   getLanguageHead = async () => {
@@ -18,38 +17,30 @@ class LearningRoute extends Component {
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
-
-    const language = data.language.name;
-    const words = data.words;
-    const score = data.language.total_score;
-    this.setState({ language, words, score });
+    console.log(data)
+    this.setState({
+      currentWord: data.nextWord,
+      correct: data.wordCorrectCount,
+      incorrect: data.wordIncorrectCount
+    });
   };
 
   componentDidMount() {
-    this.getLanguageInfo();
+    this.getLanguageHead();
   }
 
   renderWord(){
-    console.log(this.state.words)
-    if (this.state.words.length === 0){
-      return <p></p>
-    } else {
-      let current = this.state.words[this.state.currentWord]
     return <section>
-      <h2>{current.original}</h2>
-      <p>Guesses: {current.correct_count + current.incorrect_count}</p>
-      <p>Correct: {current.correct_count}</p>
-    </section>
-    }
-    
+      <h2>{this.state.currentWord}</h2>
+      <p>Guesses: {this.state.correct + this.state.incorrect}</p>
+      <p>Correct: {this.state.correct}</p>
+    </section>    
   }
 
   render() {
     return <section>
-      <h2>{this.state.language}</h2>
         <h3>Word to practice</h3>
         {this.renderWord()}
-        <p>Total correct answers: {this.state.score}</p>
         <a href="/learn">
           <button>Start practicing</button>
         </a>
