@@ -41,6 +41,11 @@ class LearningRoute extends Component {
         totalScore,
         isCorrect
       } = res;
+      if (isCorrect) {
+        this.setState({ correct: this.state.correct + 1 });
+      } else {
+        this.setState({ incorrect: this.state.incorrect + 1 });
+      }
       this.setState({
         nextWord,
         wordCorrectCount,
