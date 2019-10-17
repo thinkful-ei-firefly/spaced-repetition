@@ -15,7 +15,6 @@ class LearningRoute extends Component {
     isCorrect: null
   };
 
-
   getNextWord = () => {
     GuessService.getLanguageHead().then(res =>
       this.setState({
@@ -26,13 +25,17 @@ class LearningRoute extends Component {
         isCorrect: null
       })
     );
-  }
-  
+  };
+
   handleButtonClick = event => {
-    console.log(this.state);
-    this.setState({ currentWord: this.state.nextWord, isCorrect: null })
-  }
-  
+    this.setState({
+      currentWord: this.state.nextWord,
+      correct: this.state.wordCorrectCount,
+      incorrect: this.state.wordIncorrectCount,
+      isCorrect: null
+    });
+  };
+
   handleFormSubmit = event => {
     event.preventDefault();
     let { guess } = event.target;
@@ -84,9 +87,12 @@ class LearningRoute extends Component {
             ? 'You were correct! :D'
             : 'Good try, but not quite right :('}
         </h2>
-        <p className="DisplayFeedback">
-          The correct translation for {this.state.currentWord} was {this.state.answer} and you chose {this.state.guess}!
-        </p>
+        <div className="DisplayFeedback">
+          <p>
+            The correct translation for {this.state.currentWord} was{' '}
+            {this.state.answer} and you chose {this.state.guess}!
+          </p>
+        </div>
         <button onClick={this.handleButtonClick}>Try another word!</button>
       </>
     );
@@ -97,14 +103,13 @@ class LearningRoute extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <section>
         {this.state.isCorrect === null ? <h2>Translate the word:</h2> : ''}
         <span>{this.state.currentWord}</span>
-        <p className="DisplayScore">
-          Your total score is: {this.state.totalScore}
-        </p>
+        <div className="DisplayScore">
+          <p>Your total score is: {this.state.totalScore}</p>
+        </div>
         <p>You have answered this word correctly {this.state.correct} times.</p>
         <p>
           You have answered this word incorrectly {this.state.incorrect} times.
