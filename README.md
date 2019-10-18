@@ -1,47 +1,18 @@
 # Spaced Repetition Capstone
+Learn Japanese
+Live: https://spaced-repetition-japanese.benjaminjrosen.now.sh
+Front End: https://github.com/thinkful-ei-firefly/spaced-repetition-ben-keith
+Back End: https://github.com/thinkful-ei-firefly/spaced-repetition-api-ben-keith
 
-## Setup
+This is an app to help people learn basic Japanese through spaced repetition. It presents the user with various words and
+they must guess what the translation of the word is. They are shown if they were correct and the correct translation if
+they were not correct, and can move onto another word.
 
-To setup the application
 
-1. Fork and clone the project to your machine
-2. `npm install`. This will also install the application *Cypress.io* for running browser integration tests
+The site uses various url's to display information.
+"/register" is where a new user can create an account, with a display name, user name, and password
+"/login" is where users can log in to the server to access their scores
+"/" is the homepage that displays your username, the words you are trying to learn, and their respective scores
+"/learn"  is the core of the spaced repetition learning. It displays a word in Japanese and prompts the user
+  to submit the english translation. 
 
-The project expects you have the Spaced repetition API project setup and running on http://localhost:8000.
-
-Find instructions to setup the API here https://github.com/Thinkful-Ed/spaced-repetition-api.
-
-## Running project
-
-This is a `create-react-app` project so `npm start` will start the project in development mode with hot reloading by default.
-
-## Running the tests
-
-This project uses [Cypress IO](https://docs.cypress.io) for integration testing using the Chrome browser.
-
-Cypress has the following expectations:
-
-- You have cypress installed (this is a devDependency of the project)
-- You have your application running at http://localhost:3000.
-  - You can change the address of this expectation in the `./cypress.json` file.
-- Your `./src/config.js` is using http://localhost:8000/api as the `API_ENDPOINT`
-
-To start the tests run the command:
-
-```bash
-npm run cypress:open
-```
-
-On the first run of this command, the cypress application will verify its install. Any other runs after this, the verification will be skipped.
-
-The command will open up the Cypress application which reads tests from the `./cypress/integration/` directory. You can then run individual tests by clicking on the file names or run all tests by clicking the "run all tests" button in the cypress GUI.
-
-Tests will assert against your running localhost client application.
-
-You can also start all of the tests in the command line only (not using the GUI) by running the command:
-
-```bash
-npm run cypress:run
-```
-
-This will save video recordings of the test runs in the directory `./cypress/videos/`.
