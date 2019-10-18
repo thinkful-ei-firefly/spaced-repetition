@@ -1,0 +1,50 @@
+.Registration {
+  margin-top: 30px;
+}
+
+.Registration > p {
+  text-align: center;
+  font-style: italic;
+  color: #f596aa;
+}
+
+.Registration > h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.Registration > form {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* below can be moved to RegistrationForm.css? */
+
+.Registration * input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Registration * div {
+  margin-bottom: 10px;
+}
+
+.Registration * footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.Registration * footer > * {
+  display: block;
+}
+
+.Registration * footer > a {
+  margin-top: 10px;
+}
+
+.Registration * button {
+  padding: 5px;
+  font-size: 14px;
+  margin: 0 auto;
+}

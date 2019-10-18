@@ -1,105 +1,105 @@
-body {
-  background: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Itsukushima_Gate.jpg');
-  background-size: 100vw;
-}
+/* body { */
+/*   background: url("https://upload.wikimedia.org/wikipedia/commons/0/0e/Itsukushima_Gate.jpg"); */
+/*   background-size: 100vw; */
+/* } */
 
-section {
-  color: #3c3c3c;
-  padding: 15px;
-  padding-left: 2vw;
-  font-family: 'Cuprum', sans-serif;
-  font-size: 30px;
-  max-width: 550px;
-}
+/* section { */
+/*   color: #3c3c3c; */
+/*   padding: 15px; */
+/*   padding-left: 2vw; */
+/*   font-family: "Cuprum", sans-serif; */
+/*   font-size: 30px; */
+/*   max-width: 550px; */
+/* } */
 
-header {
-  color: #3c3c3c;
-  padding: 15px;
-  padding-left: 2vw;
-  font-family: 'Acme', sans-serif;
-  font-size: 30px;
-  margin: 10px;
-}
+/* header { */
+/*   color: #3c3c3c; */
+/*   padding: 15px; */
+/*   padding-left: 2vw; */
+/*   font-family: 'Acme', sans-serif; */
+/*   font-size: 30px; */
+/*   margin: 10px; */
+/* } */
 
-a:visited {
-  color: #3c3c3c;
-}
-a:hover {
-  color: rgb(175, 175, 175);
-  text-shadow: #3c3c3c 2px 2px;
-}
+/* a:visited { */
+/*   color: #3c3c3c; */
+/* } */
+/* a:hover { */
+/*   color: rgb(175, 175, 175); */
+/*   text-shadow: #3c3c3c 2px 2px; */
+/* } */
 
-.App {
-  background-color: rgba(256, 256, 256, 0.6);
-  height: 100vh;
-  position: absolute;
-  width: 100%;
-}
+/* .App { */
+/*   background-color: rgba(256, 256, 256, 0.6); */
+/*   height: 100vh; */
+/*   position: absolute; */
+/*   width: 100%; */
+/* } */
 
-input {
-  background-color: rgba(256, 256, 256, 0.6);
-  font-size: 20px;
-  font-family: 'Cuprum', sans-serif;
-  color: #3c3c3c;
-}
+/* input { */
+/*   background-color: rgba(256, 256, 256, 0.6); */
+/*   font-size: 20px; */
+/*   font-family: "Cuprum", sans-serif; */
+/*   color: #3c3c3c; */
+/* } */
 
-button {
-  border-radius: 5px;
-  background-color: rgba(256, 256, 256, 0.5);
-  font-size: 25px;
-  padding: 5px;
-  font-family: 'Cuprum', sans-serif;
-  color: #3c3c3c;
-  box-shadow: #3c3c3c 1px 1px;
-}
-button:hover {
-  background-color: rgba(256, 256, 256, 1);
-  box-shadow: #3c3c3c 3px 3px;
-}
+/* button { */
+/*   border-radius: 5px; */
+/*   background-color: rgba(256, 256, 256, 0.5); */
+/*   font-size: 25px; */
+/*   padding: 5px; */
+/*   font-family: "Cuprum", sans-serif; */
+/*   color: #3c3c3c; */
+/*   box-shadow: #3c3c3c 1px 1px; */
+/* } */
+/* button:hover { */
+/*   background-color: rgba(256, 256, 256, 1); */
+/*   box-shadow: #3c3c3c 3px 3px; */
+/* } */
 
-/*
-font-family: 'Acme', sans-serif;
-font-family: 'Cuprum', sans-serif;
-font-family: 'Pathway Gothic One', sans-serif;
-<link href="https://fonts.googleapis.com/css?family=Acme|Cuprum|Pathway+Gothic+One&display=swap" rel="stylesheet">
+/* /\* */
+/* font-family: 'Acme', sans-serif; */
+/* font-family: 'Cuprum', sans-serif; */
+/* font-family: 'Pathway Gothic One', sans-serif; */
+/* <link href="https://fonts.googleapis.com/css?family=Acme|Cuprum|Pathway+Gothic+One&display=swap" rel="stylesheet"> */
 
-*/
+/* *\/ */
 
-@media only screen and (max-width: 1025px) {
-  body {
-    background-size: auto 100vh;
-    background-position-x: -400px;
-  }
-}
+/* @media only screen and (max-width: 1025px) { */
+/*   body { */
+/*     background-size: auto 100vh; */
+/*     background-position-x: -400px; */
+/*   } */
+/* } */
 
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 35px;
-  }
-  header {
-    font-size: 30px;
-    margin: 5px;
-    padding: 5px;
-    text-align: center;
-  }
-  section {
-    font-size: 35px;
-    padding: 2px;
-    margin: 2px;
-    text-align: center;
-  }
-  p {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-  h2 {
-    font-size: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .App{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-  }
-}
+/* @media only screen and (max-width: 600px) { */
+/*   h1 { */
+/*     font-size: 35px; */
+/*   } */
+/*   header { */
+/*     font-size: 30px; */
+/*     margin: 5px; */
+/*     padding: 5px; */
+/*     text-align: center; */
+/*   } */
+/*   section { */
+/*     font-size: 35px; */
+/*     padding: 2px; */
+/*     margin: 2px; */
+/*     text-align: center; */
+/*   } */
+/*   p { */
+/*     margin-top: 5px; */
+/*     margin-bottom: 5px; */
+/*   } */
+/*   h2 { */
+/*     font-size: 40px; */
+/*     margin-top: 10px; */
+/*     margin-bottom: 10px; */
+/*   } */
+/*   .App { */
+/*     height: 100vh; */
+/*     width: 100vw; */
+/*     position: absolute; */
+/*   } */
+/* } */

@@ -1,0 +1,9 @@
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
+  color: #f7f1d5;
+}
