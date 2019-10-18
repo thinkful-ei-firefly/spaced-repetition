@@ -74,7 +74,7 @@ class LearningRoute extends Component {
         <label htmlFor="learn-guess-input">
           What's the translation for this word?
         </label>
-        <input type="text" required id="learn-guess-input" name="guess"></input>
+        <input type="text" required id="learn-guess-input" name="guess"></input><br/>
         <button type="submit">Submit your answer</button>
       </form>
     );
@@ -107,7 +107,7 @@ class LearningRoute extends Component {
     return (
       <section className="Learning">
         {this.state.isCorrect === null ? <h2>Translate the word:</h2> : ''}
-        <span>{this.state.currentWord}</span>
+        <span lang="ja">{this.state.currentWord}</span>
         <div className="DisplayScore">
           <p>Your total score is: {this.state.totalScore}</p>
         </div>
