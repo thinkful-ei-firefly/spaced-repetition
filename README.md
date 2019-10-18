@@ -16,3 +16,11 @@ The site uses various url's to display information.
 "/learn"  is the core of the spaced repetition learning. It displays a word in Japanese and prompts the user
   to submit the english translation. 
 
+  User Stories
+As a registered user, I can login to the application so that I can begin learning.
+As a prospective user, I can register an account so that I can login and use the application.
+As a logged in user, I'm directed to a dashboard where I can see my progress learning my language.
+As a logged in user, I can learn words using spaced repetition
+As a logged in user, I can learn another word after receiving feedback from my previous answer.
+
+
