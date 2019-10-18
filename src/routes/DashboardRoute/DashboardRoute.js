@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import config from '../../config';
 import Word from '../../components/Word/Word';
+import "./dashboard.css"
 
 class DashboardRoute extends Component {
   // static contextType = LanguageContext;
@@ -37,10 +38,10 @@ class DashboardRoute extends Component {
 
   render() {
     return (
-      <section>
+      <section className="Dashboard">
         <h2>{this.state.language}</h2>
         <h3>Words to practice</h3>
-        <ul>{this.renderWords()}</ul>
+        <ul className="WordList">{this.renderWords()}</ul>
         <p>Total correct answers: {this.state.score}</p>
         <a href="/learn">
           <button>Start practicing</button>

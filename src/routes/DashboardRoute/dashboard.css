@@ -1,0 +1,25 @@
+.Dashboard{
+  text-align: center;
+  font-size: 25px;
+}
+
+.WordList{
+  padding: 10px;
+}
+
+.WordList > li{
+  padding: 15px;
+}
+
+.Dashboard > a > button {
+  width: 400px;
+  height: 50px;
+}
+
+@media only screen and (min-width: 1000px){
+  .WordList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

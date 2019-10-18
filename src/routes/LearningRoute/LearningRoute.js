@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GuessService from '../../services/guess-services';
+import "./learning.css"
 
 class LearningRoute extends Component {
   state = {
@@ -104,7 +105,7 @@ class LearningRoute extends Component {
 
   render() {
     return (
-      <section>
+      <section className="Learning">
         {this.state.isCorrect === null ? <h2>Translate the word:</h2> : ''}
         <span>{this.state.currentWord}</span>
         <div className="DisplayScore">

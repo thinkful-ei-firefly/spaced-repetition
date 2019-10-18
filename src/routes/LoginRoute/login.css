@@ -1,0 +1,22 @@
+.Login{
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.LoginButton{
+  width: 50vw;
+  height: 30px;
+}
+
+.Login > form > div > label{
+  padding: 10px;
+}
+
+
+
+@media only screen and (min-width:700px){
+  .LoginButton{
+    width: 500px;
+  }
+}
