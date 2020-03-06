@@ -14,7 +14,7 @@ class LearningRoute extends Component {
     answer: '',
     guess: '',
     isCorrect: null,
-    language: ''
+    // language: ''
   };
 
   getNextWord = () => {
@@ -25,7 +25,7 @@ class LearningRoute extends Component {
         incorrect: res.wordIncorrectCount,
         totalScore: res.totalScore,
         isCorrect: null,
-        language: res.language
+        // language: res.language
       })
     );
   };
